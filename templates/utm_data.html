@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>UTM Data</h1>
+
+<!-- Filter Form -->
+<form method="GET" action="{{ url_for('view_utm_data') }}">
+    <label for="client">Filter by Client:</label>
+    <select name="client" id="client">
+        <option value="">All Clients</option>
+        {% for client in clients %}
+        <option value="{{ client }}">{{ client }}</option>
+        {% endfor %}
+    </select>
+
+    <label for="campaign">Filter by Campaign:</label>
+    <select name="campaign" id="campaign">
+        <option value="">All Campaigns</option>
+        {% for campaign in campaigns %}
+        <option value="{{ campaign }}">{{ campaign }}</option>
+        {% endfor %}
+    </select>
+
+    <button type="submit">Filter</button>
+</form>
+
+<!-- UTM Data Table -->
+<table border="1">
+    <thead>
+        <tr>
+            <th>Client</th>
+            <th>Source</th>
+            <th>Medium</th>
+            <th>Campaign</th>
+            <th>UTM URL</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for entry in utm_data %}
+        <tr>
+            <td>{{ entry.client }}</td>
+            <td>{{ entry.source }}</td>
+            <td>{{ entry.medium }}</td>
+            <td>{{ entry.campaign }}</td>
+            <td>{{ entry.utm_url }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

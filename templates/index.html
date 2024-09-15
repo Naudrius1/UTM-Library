@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>UTM URL Generator</h2>
+<form method="POST" action="/submit">
+    <div>
+        <label for="client">Select Client:</label>
+        <!-- Client Dropdown -->
+        <select name="client" id="client" required>
+            <option value="" disabled selected>Select Client</option>
+            {% for client in clients %}
+            <option value="{{ client }}">{{ client }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    
+    <div>
+        <label for="campaign">Select Campaign:</label>
+        <!-- Campaign Dropdown -->
+        <select name="campaign" id="campaign" required>
+            <option value="" disabled selected>Select Campaign</option>
+        </select>
+    </div>
+    
+    <div>
+        <label for="source">UTM Source:</label>
+        <input type="text" name="source" required>
+    </div>
+    
+    <div>
+        <label for="medium">UTM Medium:</label>
+        <input type="text" name="medium" required>
+    </div>
+    
+    <div>
+        <label for="term">UTM Term (Optional):</label>
+        <input type="text" name="term">
+    </div>
+
+    <div>
+        <label for="content">UTM Content (Optional):</label>
+        <input type="text" name="content">
+    </div>
+    
+    <button type="submit">Generate UTM</button>
+</form>
+{% endblock %}

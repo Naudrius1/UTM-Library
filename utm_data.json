@@ -1,0 +1,72 @@
+[
+    {
+        "client": "ASOS",
+        "source": "test",
+        "medium": "test",
+        "campaign": "feusdbvisj",
+        "utm_url": "?utm_source=test&utm_medium=test&utm_campaign=feusdbvisj&utm_term=test&utm_content=test"
+    },
+    {
+        "client": "ASOS",
+        "source": "test",
+        "medium": "test",
+        "campaign": "fsdvrdf re",
+        "utm_url": "?utm_source=test&utm_medium=test&utm_campaign=fsdvrdf re&utm_term=test&utm_content=test"
+    },
+    {
+        "client": "ASOS",
+        "source": "test",
+        "medium": "test",
+        "campaign": "fsdvrdf re",
+        "utm_url": "?utm_source=test&utm_medium=test&utm_campaign=fsdvrdf re&utm_term=test&utm_content=test"
+    },
+    {
+        "client": "Peter",
+        "source": "test",
+        "medium": "test",
+        "campaign": "fsdvrdf re",
+        "utm_url": "?utm_source=test&utm_medium=test&utm_campaign=fsdvrdf re&utm_term=test&utm_content=test"
+    },
+    {
+        "client": "Dell",
+        "source": "test",
+        "medium": "test",
+        "campaign": "fsdvrdf re",
+        "utm_url": "?utm_source=test&utm_medium=test&utm_campaign=fsdvrdf re&utm_term=test&utm_content=test"
+    },
+    {
+        "client": "BDB",
+        "source": "test",
+        "medium": "test",
+        "campaign": "Winter",
+        "utm_url": "?utm_source=test&utm_medium=test&utm_campaign=Winter&utm_term=test&utm_content=test"
+    },
+    {
+        "client": "Apple",
+        "source": "6",
+        "medium": "64",
+        "campaign": "Iphone",
+        "utm_url": "?utm_source=6&utm_medium=64&utm_campaign=Iphone&utm_term=58&utm_content=15"
+    },
+    {
+        "client": "Amelia",
+        "source": "6",
+        "medium": "test",
+        "campaign": "Nenorta",
+        "utm_url": "?utm_source=6&utm_medium=test&utm_campaign=Nenorta&utm_term=58&utm_content=15"
+    },
+    {
+        "client": "Peter",
+        "source": "test",
+        "medium": "test",
+        "campaign": "fsdvrdf re",
+        "utm_url": "?utm_source=test&utm_medium=test&utm_campaign=fsdvrdf re&utm_term=&utm_content="
+    },
+    {
+        "client": "Peter",
+        "source": "test",
+        "medium": "test",
+        "campaign": "fsdvrdf re",
+        "utm_url": "?utm_source=test&utm_medium=test&utm_campaign=fsdvrdf re"
+    }
+]

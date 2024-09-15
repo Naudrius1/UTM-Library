@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Admin Page</h2>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+                <li class="alert alert-{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+<h3>Add New Client</h3>
+<form method="POST" action="{{ url_for('admin.admin') }}">
+    <input type="text" name="client_name" placeholder="Client Name" required>
+    <button type="submit" name="add_client">Add Client</button>
+</form>
+
+<h3>Add Campaign to Client</h3>
+<form method="POST" action="{{ url_for('admin.admin') }}">
+    <select name="client_select" required>
+        <option value="" disabled selected>Select Client</option>
+        {% for client in clients %}
+        <option value="{{ client }}">{{ client }}</option>
+        {% endfor %}
+    </select>
+    <input type="text" name="campaign_name" placeholder="Campaign Name" required>
+    <button type="submit" name="add_campaign">Add Campaign</button>
+</form>
+
+<h3>Delete Client</h3>
+<form method="POST" action="{{ url_for('admin.admin') }}">
+    <select name="client_select" required>
+        <option value="" disabled selected>Select Client</option>
+        {% for client in clients %}
+        <option value="{{ client }}">{{ client }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit" name="delete_client">Delete Client</button>
+</form>
+
+<!-- Client dropdown (for selecting a client to delete campaign) -->
+
+<h3>Delete Campaign</h3>
+<form method="POST" action="{{ url_for('admin.admin') }}">
+    <select name="client_select" id="client_for_deleting_campaign" required>
+        <option value="" disabled selected>Select Client</option>
+        {% for client in clients %}
+        <option value="{{ client }}">{{ client }}</option>
+        {% endfor %}
+    </select>
+    
+    <select name="campaign_select" id="campaign_select" required>
+        <option value="" disabled selected>Select Campaign</option>
+    </select>    
+    <button type="submit" name="delete_campaign">Delete Campaign</button>
+</form>
+{% endblock %}
